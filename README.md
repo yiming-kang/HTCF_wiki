@@ -1,5 +1,3 @@
-# Hello, Brent lab users!
-
 ## HTCF cluster access
 First thing first is to connect to **WUSM-secure** wifi. 
 
