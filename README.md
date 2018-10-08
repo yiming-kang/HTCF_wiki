@@ -61,3 +61,19 @@ rsync -aHv --progress <source_directory> <target_directory>
 
 ## Package management
 Most bioinformatics tools are pre-installed as **modules**. Use `module avail <tool>` to check the availabilities, and use `module load <tool/version>` to load the module. If unavailable, install to your local, e.g. `pip install --user <tool>`.
+
+## Additional storage by WUSTL Research Infrastructure Services (RIS)
+The WashU IT RIS Storage offers some 5TB storage space for the group. Follow the steps to access the storage:
+1. Mount to RIS by authenticating with your WUSTL password
+```
+wustl-ris mount ~/ris_mount brent
+```
+2. Transfer files on HTCF from/to RIS space
+```
+rsync -aHv ~/ris_mount/brent/Active/<src_file> <dest_dir>/
+rsync -aHv <src_file> ~/ris_mount/brent/Active/<dest_dir>/
+```
+3. When completed, un-mount RIS
+```
+wustl-ris unmount ~/ris_mount
+```
