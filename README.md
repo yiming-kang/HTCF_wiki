@@ -68,10 +68,10 @@ The WashU IT RIS Storage offers some 5TB storage space for the group. Follow the
 ```
 wustl-ris mount ~/ris_mount brent
 ```
-2. Transfer files on HTCF from/to RIS space
+2. Transfer files on HTCF to RIS space, and the other way around
 ```
-rsync -aHv ~/ris_mount/brent/Active/<src_file> <dest_dir>/
 rsync -aHv <src_file> ~/ris_mount/brent/Active/<dest_dir>/
+rsync -aHv ~/ris_mount/brent/Active/<src_file> <dest_dir>/
 ```
 3. When completed, un-mount RIS
 ```
